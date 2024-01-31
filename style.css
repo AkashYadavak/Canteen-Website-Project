@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    /* overflow-x:hidden; */
+    background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    
+}
+
+.container{
+    height: 12vh;
+    width: 100%;  
+}
+
+header{
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    /* border: 2px solid black; */
+    width: 100%;
+    height: 100%;
+    
+    /* background-color: darkslateblue; */
+    background: #4CB8C4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3CD3AD, #4CB8C4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3CD3AD, #4CB8C4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navList{
+    width: 100%;
+    margin-left: 7%;
+    margin-right: 7%;
+    
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.8rem;
+}
+
+
+#navList li span{
+    color: green;
+    transition: color 2s ease-in-out;
+}
+
+#navList li span:hover{
+    color: white;
+}
+
+
+#navList li a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-right: 15px;
+    color: white;
+    position: relative;
+
+    transition: color 1s linear;
+}
+
+#navList li a:hover{
+    color: green;
+}
+
+#navList li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: green;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    transition: width 0.5s linear;
+}
+
+#navList li a:hover::after{
+    width: 100%;
+}
+
+/* ---------- main ----------------  */
+
+.content{
+    /* border: 2px solid black; */
+    width: 65vw;
+    /* height: 60vh; */
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: white;
+    box-shadow: 0px 0 12px black, 0px 0 12px black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.items{
+    margin: 5px 5px;
+    height: 35vh;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+.about-dishes{
+    /* border: 2px solid blue; */
+    /* margin:  */
+    padding: 4px 4px;
+    flex-basis: 45%;
+    background-color: rgb(163, 13, 13);
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px 2px darkgray,  -1px -1px 2px 2px darkgray;
+}
+
+.about-dishes h2{
+    text-align: center;
+    color: lightblue;
+    transition: all 0.5s linear;
+}
+
+.about-dishes h2:hover{
+    color: lightcyan;
+}
+
+.about-dishes p{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 5% 10%;
+    color: lawngreen ;
+    text-align: center;
+}
+
+.about-dishes details summary{
+    width: 20%;
+    font-size: 1.2rem;
+    color: lightgreen;
+    margin-left: 40%;
+
+    position: relative;
+    transition: color 1s linear;
+}
+
+.about-dishes details summary:hover{
+    color: yellow;
+
+}
+
+.about-dishes details summary::after{
+    content: '';
+    width: 0%;
+    height: 0.5%;
+    background-color: lightgreen;
+    position: absolute;
+    left:0;
+    bottom: 3px;
+
+    transition: width 0.5s linear;
+}
+
+.about-dishes details summary:hover::after{
+    width: 100%;
+}
+
+.about-dishes details summary::before{
+    content: '';
+    width: 0%;
+    height: 0.5%;
+    background-color: lightgreen;
+    position: absolute;
+    right:0;
+    bottom: -1px;
+
+    transition: width 0.5s linear;
+}
+
+
+.about-dishes details summary:hover::before{
+    width: 100%;
+}
+
+.about-dishes details ol li{
+    margin-left: 25%;
+}
+
+
+.dish-1-image{
+    /* border: 2px solid blue; */
+    flex-basis: 45%;
+    position: relative;
+}
+.dish-1-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    filter: drop-shadow(0 0 0.75rem rgb(4, 53, 25));
+    transition: all 1s linear;
+}
+
+.dish-1-image:hover img{
+    transform: scale(1.125);
+}
+
+.overlay{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(53, 50, 50, 0.676);
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: all 1s linear;
+}
+
+.dish-1-image:hover .overlay{
+    opacity: 1;
+    transform: scale(1.125);
+    cursor:pointer;
+}
+
+.overlay span{
+    color: white;
+    background-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------- footer ------------ */
+
+.footerBox{
+    
+    width: 100%;
+    height: 5vh;
+    background: #4CB8C4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3CD3AD, #4CB8C4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3CD3AD, #4CB8C4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* position: fixed;
+    bottom: 0px; */
+}
+
+.footerBox p{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+
